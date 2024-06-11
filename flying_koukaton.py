@@ -32,12 +32,12 @@ def main():
         if key_lst[pg.K_LEFT]:
             move_x = -1
         if key_lst[pg.K_RIGHT]:
-            move_x = 1
+            move_x = 2
 
-        kk_rct.move_ip(move_x, move_y)
+        kk_rct.move_ip(-1+move_x, move_y)
 
-        speed_multiplier = 2 if move_x == 1 else 1
-        x = (tmr * speed_multiplier) % 3200
+    
+        x = (tmr * 1) % 3200
 
         screen.blit(bg_img, [-x, 0])
         screen.blit(bg_img2, [-x + 1600, 0])
